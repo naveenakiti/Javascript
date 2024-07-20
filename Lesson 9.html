@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <!-- Exercise 9a, 9b-->
+    <button>9a</button>
+    <button class="js-button">9b</button>
+    <br >
+    <br >
+
+    <!-- Exercise 9c-->
+    <button onclick="
+    document.querySelector('.js-choice')
+        .innerHTML = 'You choose: Heads';
+    ">Heads</button>
+
+    <button onclick="
+    document.querySelector('.js-choice')
+        .innerHTML = 'You choose: Tails';
+    ">Tails</button>
+    <p class="js-choice"></p>
+
+    <!-- Exercise 9d,9e-->
+    <input placeholder="Name" class="js-name-input" 
+    onkeydown="
+    const inputElement = document.querySelector('.js-name-input');
+    document.querySelector('.js-message')
+        .innerHTML = `Your name is: ${inputElement.value}`;
+    ">
+
+    <button onclick="
+        displayMessage ();
+    ">Submit</button>
+
+    <p class="js-message"></p>
+
+
+
+
+    <script>
+    //-- Exercise 9a, 9b--//
+    console.log(document.querySelector('button'));
+
+    document.querySelector('.js-button')
+        .innerHTML = '9b done!';
+    
+    //--Exercise 9e,9f--//
+    function displayMessage () {
+        const inputElement = document.querySelector('.js-name-input');
+        document.querySelector('.js-message')
+            .innerHTML = `Your name is: ${inputElement.value}`;
+    }
+    </script>
+</body>
+</html>

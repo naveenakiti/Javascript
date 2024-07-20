@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+
+        /*-- Exercise 8a,8b,8c --*/
+        const product = {
+            name: 'basketball',
+            price: 2095
+        };
+        console.log(product);
+
+        product.price += 500;
+        product['delivery-time'] = '3 days';
+        console.log(product);
+
+        /*-- Exercise 8d --*/
+        function comparePrice(product1, product2) {
+            if (product1.price < product2.price) {
+                return product1;
+            } else {
+                return product2;
+            }
+        }
+
+        const product1  = {
+            name: 'basketball',
+            price: 2095
+        };
+
+        const product2 = {
+            name: 'socks',
+            price:1060
+        };
+
+        console.log(comparePrice(product1, product2));
+
+        /*-- Exercise 8e --*/
+        function isSameProduct(product3, product4) {
+            if (
+                product3.name === product4.name &&
+                product3.price === product4.price
+            ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        /* shortcut code for above exercise 8e
+        function isSameProduct(product1, product2) {
+            return (
+                product3.name === product4.name &&
+                product3.price === product4.price
+            );
+        }*/
+
+        const product3 = {
+            name: 'basketball',
+            price: 2095
+        };
+
+        const product4 = {
+            name: 'socks',
+            price: 1090
+        };
+
+        const product5 = {
+            name: 'basketball',
+            price: 2095
+        }
+
+        console.log(isSameProduct(product3, product4));
+        console.log(isSameProduct(product3, product5));
+
+
+        /*-- Exercise 8f --*/
+
+        const object1 = {
+            Respect: 'Good Morning'
+        };
+        console.log(object1);
+        console.log('GOOD MORNING!'.toLowerCase());
+
+        /*-- Exercise 8g --*/
+
+        let text= "test"
+        let result = text.repeat(2);
+        console.log(result);
+
+       //or shortcut for above 8gEx// console.log('hello'.repeat(2));
+    </script>
+
+        
+    
+</body>
+</html>
